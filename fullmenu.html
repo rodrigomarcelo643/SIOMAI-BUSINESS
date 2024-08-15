@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Full Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<header>
+    <nav>
+        <li> <a href="index.html#seller" ><button class="top-right-button" >BACK</button></a></li>
+        <li><a href="get_orders.php"><img src="add-to-cart.png"></a></li>
+    </nav>
+</header>
+<body>
+    <section id="seller" class="best-seller">
+       
+
+        <h1>FULL <span class="seller">MENU</span></h1>
+        <div class="grid">
+            <div class="card-container">
+                <div class="card">
+                    <img src="tofu.png">
+                    <div class="card-content" data-product="tofu">
+                        <h3>CHEESE TOFU</h3>
+                        <h4>₱9.00</h4>
+                        <p>Cheese tofu is an absolutely delightful creation that brings together the best of both worlds: the creamy richness of cheese and the wholesome goodness of tofu.</p>
+                        <div class="quantity-section">
+                            <button class="quantity-btn" onclick="decrementQuantity('tofu')">-</button>
+                            <input type="number" id="quantity_tofu" value="1" min="1" onchange="calculateTotalPrice('tofu')">
+                            <button class="quantity-btn" onclick="incrementQuantity('tofu')">+</button>
+                        </div>
+                        <div class="total-price">Total Price: ₱9.00</div>
+                        <button onclick="showAlert('tofu')" class="full_btn">BUY NOW !</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="porksiomai.png">
+                    <div class="card-content" data-product="siomai">
+                        <h3>PORK SIOMAI</h3>
+                        <h4>₱24.00/4pcs</h4>
+                        <p>Step right up and prepare to be dazzled by the culinary sensation that is pork siomai! If you're ready for a taste experience that will leave you craving more.</p>
+                        <div class="quantity-section">
+                            <button class="quantity-btn" onclick="decrementQuantity('siomai')">-</button>
+                            <input type="number" id="quantity_siomai" value="1" min="1" onchange="calculateTotalPrice('siomai')">
+                            <button class="quantity-btn" onclick="incrementQuantity('siomai')">+</button>
+                        </div>
+                        <div class="total-price">Total Price: ₱24.00</div>
+                        <button class="full_btn" onclick="showAlert('siomai')">BUY NOW !</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="ngohiong.png">
+                    <div class="card-content" data-product="NGOHIONG">
+                        <h3>NGOHIONG</h3>
+                        <h4>₱9.00</h4>
+                        <P>Step right up and prepare your taste buds for an unforgettable culinary journey with ngohiong – the ultimate crispy, flavorful delight that's sure to tantalize.</P>
+                        <div class="quantity-section">
+                            <button class="quantity-btn" onclick="decrementQuantity('NGOHIONG')">-</button>
+                            <input type="text" id="quantity_NGOHIONG" value="1">
+                            <button class="quantity-btn" onclick="incrementQuantity('NGOHIONG')">+</button>
+                        </div>
+                        <div class="total-price">Total Price: ₱9.00</div>
+                        <button class="full_btn" onclick="showAlert('NGOHIONG')">BUY NOW !</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <img src="beffsiomai.png">
+                    <div class="card-content" data-product="beef">
+                        <h3>BEEF SIOMAI</h3>
+                        <h4>₱24.00/4pcs</h4>
+                        <P>Beef siomai is a fantastic choice for anyone looking for a savory, flavorful treat. With its tender beef filling wrapped in  it's a classic  food enthusiasts.</P>
+                        <div class="quantity-section">
+                            <button class="quantity-btn" onclick="decrementQuantity('beef')">-</button>
+                            <input type="text" id="quantity_beef" value="1">
+                            <button class="quantity-btn" onclick="incrementQuantity('beef')">+</button>
+                        </div>
+                        <div class="total-price">Total Price: ₱24.00</div>
+                        <button onclick="showAlert('beef')" class="full_btn">BUY NOW !</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="chickensiomai.png" >
+                    <div class="card-content" data-product="chicken">
+                        <h3>CHICKEN SIOMAI</h3>
+                        <h4>₱24.00/4pcs</h4>
+                        <P>Chicken siomai is a delightful variation of this beloved dumpling dish. Made with succulent chicken meat and a blend of aromatic spices, chicken siomai offers.</P>
+                        <div class="quantity-section">
+                            <button class="quantity-btn" onclick="decrementQuantity('chicken')">-</button>
+                            <input type="text" id="quantity_chicken" value="1">
+                            <button class="quantity-btn" onclick="incrementQuantity('chicken')">+</button>
+                        </div>
+                        <div class="total-price">Total Price: ₱24.00</div>
+                        <button onclick="showAlert('chicken')" class="full_btn">BUY NOW !</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="tempura.png">
+                    <div class="card-content" data-product="tempura">
+                        <h3>TEMPURA</h3>
+                        <h4>₱22.00/3pcs</h4>
+                        <P>A delightful dish, tempura strikes a perfect mix of soft, juicy fish or veggies and a light, crunchy batter. It's a culinary masterpiece, and irresistibly satisfying.</P>
+                        <div class="quantity-section">
+                            <button class="quantity-btn" onclick="decrementQuantity('tempura')">-</button>
+                            <input type="text" id="quantity_tempura" value="1">
+                            <button class="quantity-btn" onclick="incrementQuantity('tempura')">+</button>
+                        </div>
+                        <div class="total-price">Total Price: ₱22.00</div>
+                        <button onclick="showAlert('tempura')" class="full_btn">BUY NOW !</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <img src="chickenpork.png">
+                    <div class="card-content" data-product="pork">
+                        <h3>CHICKEN-PORK</h3>
+                        <h4>₱24.00/4pcs</h4>
+                        <P>Chicken pork siomai is a delectable fusion of two beloved meats, combining the succulence of chicken with the richness of pork in every bite.</P>
+                        <div class="quantity-section">
+                            <button class="quantity-btn" onclick="decrementQuantity('pork')">-</button>
+                            <input type="text" id="quantity_pork" value="1">
+                            <button class="quantity-btn" onclick="incrementQuantity('pork')">+</button>
+                        </div>
+                        <div class="total-price">Total Price: ₱24.00</div>
+                        <button onclick="showAlert('pork')" class="full_btn">BUY NOW !</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="lumpia.png">
+                    <div class="card-content" data-product="lumpia">
+                        <h3>LUMPIA</h3>
+                        <h4>₱10.00</h4>
+                        <P>
+                            Lumpia is a delightful and versatile Filipino dish that's sure to satisfy your cravings for something savory and satisfying. It's a culinary have a true delight for the palate. </P>
+                        <div class="quantity-section">
+                                <button class="quantity-btn" onclick="decrementQuantity('lumpia')">-</button>
+                                <input type="text" id="quantity_lumpia" value="1">
+                                <button class="quantity-btn" onclick="incrementQuantity('lumpia')">+</button>
+                            </div>
+                            <div class="total-price">Total Price: ₱10.00</div>
+                            <button onclick="showAlert('lumpia')" class="full_btn">BUY NOW !</button>
+                        </div>
+                </div>
+                <div class="card">
+                    <img src="japanese.png">
+                    <div class="card-content" data-product="japanese">
+                        <h3>JAPANESE SIOMAI</h3>
+                        <h4>₱24.00/4pcs</h4>
+                        <P>While "siomai" is traditionally a Chinese dish, Japan has its own version called "shumai" or "shumai" and  often have their terms of ingredients and flavors.</P>
+                        <div class="quantity-section">
+                            <button class="quantity-btn" onclick="decrementQuantity('japanese')">-</button>
+                            <input type="text" id="quantity_japanese" value="1">
+                            <button class="quantity-btn" onclick="incrementQuantity('japanese')">+</button>
+                        </div>
+                        <div class="total-price">Total Price: ₱24.00</div>
+                        <button onclick="showAlert('japanese')" class="full_btn">BUY NOW !</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <img src="squidroll.png">
+                    <div class="card-content" data-product="squid">
+                        <h3>SQUIDROLL</h3>
+                        <h4>₱10.00</h4>
+                        <P>Squid rolls are a delectable seafood delight that combines the ocean's bounty with the convenience of a handheld snack finely chopped in perfection.</P>
+                        <div class="quantity-section">
+                            <button class="quantity-btn" onclick="decrementQuantity('squid')">-</button>
+                            <input type="text" id="quantity_squid" value="1">
+                            <button class="quantity-btn" onclick="incrementQuantity('squid')">+</button>
+                        </div>
+                        <div class="total-price">Total Price: ₱10.00</div>
+                        <button onclick="showAlert('squid')" class="full_btn">BUY NOW !</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="hotdog.png">
+                    <div class="card-content" data-product="hotdog">
+                        <h3>HOTDOG</h3>
+                        <h4>₱13.00</h4>
+                        <P>Hotdogs are a timeless classic loved by many for their simplicity and deliciousness and steamed sausage nestled within a soft, fluffy bun.</P>
+                        <div class="quantity-section">
+                            <button class="quantity-btn" onclick="decrementQuantity('hotdog')">-</button>
+                            <input type="text" id="quantity_hotdog" value="1">
+                            <button class="quantity-btn" onclick="incrementQuantity('hotdog')">+</button>
+                        </div>
+                        <div class="total-price">Total Price: ₱13.00</div>
+                        <button onclick="showAlert('hotdog')" class="full_btn">BUY NOW !</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="puso.png">
+                    <div class="card-content" data-product="puso">
+                        <h3>PUSO</h3>
+                        <h4>4.00</h4>
+                        <P>Puso isn't just rice—it's a cultural icon, a symbol of Filipino tradition and hospitality, and a delicious culinary experience all wrapped up in one convenient package.</P>
+                        <div class="quantity-section">
+                            <button class="quantity-btn" onclick="decrementQuantity('puso')">-</button>
+                            <input type="text" id="quantity_puso" value="1">
+                            <button class="quantity-btn" onclick="incrementQuantity('puso')">+</button>
+                        </div>
+                        <div class="total-price">Total Price: ₱4.00</div>
+                        <button onclick="showAlert('puso')" class="full_btn">BUY NOW !</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="final">
+            <div class="last">
+                <h1>SIOMAI <span class="madness">MADNESS</span></h1>
+                <p>Satisfy your Siomai Cravings!</p>
+            </div>
+            <div class="last1_btn">
+                <p>Quick Links</p>
+                <a href="index.html#home" class="btn">Home</a>
+                <a href="index.html#about" class="btn">About Us</a>
+                <a href="index.html#seller" class="btn">Best Seller</a>
+                <a href="index.html#gallery" class="btn">Gallery</a>
+            </div>
+            <div class="last1">
+                <p>Contact Us</p>
+                <i class="fas fa-phone"></i>09323121231
+            </div>
+            <div class="last1">
+                <p>Social Media</p>
+                <i class="fab fa-facebook"></i> <a href="https://www.facebook.com/siomaimadnesscebu"  target="_blank">Facebook Page: Siomai Madness</a><br>
+                <i class="fas fa-envelope"></i> <a href="https://mail.google.com/mail/u/0/?hl=en#inbox?compose=DmwnWtDqMZQPFJFkpVdPWbRNHnPPPWPZjjJLjGbQNrFNzQxxLPJMmHTffcpsZfzbHtVLJjvgMdsb"  target="_blank">soimaimadness@gmail.com</a>
+                
+            </div>
+        </div>
+    </section>
+
+    <div class="copyright">
+        <p> <i>Siomai Madness @ 2013</i></p>
+    </div>
+
+</body>
+<script>
+    // Function to reset quantity input and total price to original values
+function resetInputsAndTotalPrices() {
+    var productInputs = document.querySelectorAll('input[type="number"]');
+    productInputs.forEach(function(input) {
+        input.value = '1'; // Reset quantity to 1
+    });
+
+    var totalPriceElements = document.querySelectorAll('.total-price');
+    totalPriceElements.forEach(function(element) {
+        var product = element.parentElement.getAttribute('data-product');
+        var totalPrice = getPricePerItem(product, 1); // Calculate total price with quantity 1
+        element.textContent = "Total Price: ₱" + totalPrice.toFixed(2);
+    });
+}
+
+// Function to get price per item based on product and quantity
+function getPricePerItem(product, quantity) {
+    var priceMap = {
+        'tofu': 9.00,
+        'siomai': 24.00,
+        'NGOHIONG': 9.00,
+        'beef': 24.00,
+        'chicken': 24.00,
+        'tempura': 22.00,
+        'pork': 24.00,
+        'lumpia': 10.00,
+        'japanese': 24.00,
+        'squid': 10.00,
+        'hotdog': 13.00,
+        'puso': 4.00,
+        // Add other products with their prices here
+    };
+    return priceMap[product] * quantity || 0; // Return 0 if price is not found
+}
+// Function to decrease quantity and update total price
+function decrementQuantity(product) {
+    var quantityInput = document.getElementById('quantity_' + product);
+    var currentQuantity = parseInt(quantityInput.value);
+    if (currentQuantity > 1) {
+        quantityInput.value = currentQuantity - 1;
+        calculateTotalPrice(product); // Update total price
+    }
+}
+
+// Function to increase quantity and update total price
+function incrementQuantity(product) {
+    var quantityInput = document.getElementById('quantity_' + product);
+    var currentQuantity = parseInt(quantityInput.value);
+    quantityInput.value = currentQuantity + 1;
+    calculateTotalPrice(product); // Update total price
+}
+
+// Function to calculate total price for a product
+function calculateTotalPrice(product) {
+    var quantityInput = document.getElementById('quantity_' + product);
+    var totalPriceElement = document.querySelector('.card-content[data-product="' + product + '"] .total-price');
+    var quantity = parseInt(quantityInput.value);
+    var totalPrice = getPricePerItem(product, quantity);
+    totalPriceElement.textContent = "Total Price: ₱" + totalPrice.toFixed(2);
+}
+
+
+  // Function to show alert and add to cart
+function showAlert(product) {
+    var quantityInput = document.getElementById('quantity_' + product);
+    var quantity = parseInt(quantityInput.value);
+    var totalPrice = getPricePerItem(product, quantity);
+    var productNames = {
+        'tofu': 'Cheese Tofu',
+        'siomai': 'Pork Siomai',
+        'NGOHIONG': 'NGOHIONG',
+        'beef': 'BEEF SHOMAI',
+        'chicken': 'CHICKEN SIOMAI',
+        'tempura': 'TEMPURA',
+        'pork': 'CHICKEN-PORK',
+        'lumpia': 'LUMPIA',
+        'japanese': 'JAPANESE SIOMAI',
+        'squid': 'SQUIDROLL',
+        'hotdog': 'HOTDOG',
+        'puso': 'PUSO',
+        // Add more products here
+    };
+    var productName = productNames[product] || 'Unknown Product';
+   
+    // Show alert
+    Swal.fire({
+        title: productName + ' Added to Cart',
+        html: 'Quantity: ' + quantity + '<br>Total Price: ₱' + totalPrice.toFixed(2),
+        icon: 'success',
+        confirmButtonText: 'OK',
+        customClass: {
+            title: 'my-title-class',
+            content: 'my-content-class',
+            confirmButton: 'my-confirm-button-class',
+          
+        }
+         
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Send data to PHP script using AJAX
+            var formData = new FormData();
+            formData.append('product', product);
+            formData.append('quantity', quantity);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'cart_data.php', true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    console.log(xhr.responseText);
+                } else {
+                    console.error(xhr.statusText);
+                }
+            };
+            xhr.onerror = function () {
+                console.error('Request failed');
+            };
+            xhr.send(formData);
+        }
+    });
+
+    // Reset quantity to 1 after adding to cart
+    quantityInput.value = '1';
+    resetInputsAndTotalPrices();
+    
+}
+
+
+</script>
+
+
+</html>

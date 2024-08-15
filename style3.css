@@ -1,0 +1,254 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+ }
+/* Styling the scrollbar */
+::-webkit-scrollbar {
+   width: 6px; /* width of the scrollbar */
+}
+
+/* Styling the thumb */
+::-webkit-scrollbar-thumb {
+   border-radius:20px;
+   cursor:pointer;
+   background-color: #940000; /* color of the thumb */
+}
+
+/* Styling the thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+   background-color: #ff0000; /* new color of the thumb on hover */
+}
+
+ body{
+    background: #000000;
+    overflow-x:hidden;
+ }
+.about{
+    width: 100%;
+    height: 110vh;
+    background: #1f1f1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .about .main img{
+    height: auto;
+    width: 600px;
+    max-width: 100%;
+    cursor: pointer;
+ }
+ .text{
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+    
+ }
+ .main{
+    width: 1280px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+ }
+ .text h1{
+    color: white;
+    font-size: 70px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-family: "Bebas Neue", sans-serif;
+    opacity: 80%;
+ }
+ .color{
+    color: #940000;
+    font-family: "Bebas Neue", sans-serif;
+    opacity: 80%;
+    
+ }
+ .text p{
+    color: #c0c4d6;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 30px;
+ }
+ .final {
+   display: flex;
+   justify-content: center;
+   margin-top: 6%;
+   margin-bottom: 6%;
+   color: #ffffff;
+   gap: 70px;
+}
+.final h1{
+   font-family: "Bebas Neue", sans-serif;
+   letter-spacing: 2px;
+}
+.madness{
+   color: #940000;
+   font-family: "Bebas Neue", sans-serif;
+   letter-spacing: 2px;
+}
+
+.last h1 {
+   font-size: 70px;
+}
+
+.last p {
+   font-size: 15px;
+   font-family: "Comfortaa", sans-serif;
+   font-weight: 200;
+   opacity: 0.8;
+}
+
+
+.last1 {
+   opacity: 0.8;
+   font-weight: 400;
+   font-family: "Comfortaa", sans-serif;
+}
+
+.last1 i {
+   margin-right: 5px;
+   cursor: pointer;
+}
+.last1_btn p {
+   margin-bottom: 10px;
+}
+.last1 p {
+   margin-bottom: 10px;
+}
+
+
+/* Additional CSS for the buttons */
+.last1_btn {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start; /* Align buttons from top to bottom */
+}
+.last1 p a{
+   color: white;
+   cursor: pointer;
+}
+.last1 p a:hover{
+   border-bottom: 2px solid #940000;
+   transition: 0.3s ease;
+}
+
+.btn {
+   border-bottom: 2px solid transparent;
+   text-decoration: none;
+   margin-bottom: 5px;
+   color: white;
+}
+.btn:hover {
+   border-bottom: 2px solid #940000;
+   transition: 0.3s ease;
+}
+.top-right-button {
+   position: fixed;
+   top: 20px;
+  left: 20px;
+   background-color: #cf1212;
+   color: #fff;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   text-decoration: none;
+   z-index: 999;
+   cursor:pointer;
+}
+.top-right-button a{
+   color: white;
+   cursor:pointer;
+   font-weight:bold;
+}
+.top-right-button a:hover{
+   color: #cf1212;
+}
+
+.top-right-button:hover {
+   color: #cf1212;
+   background-color: white;
+}
+.copyright{
+   background: #1F1F1F;
+   height: 30px;
+   text-align: center;
+}
+.copyright p i{
+   color: white; opacity: 50%;
+   font-weight: 200;
+   font-size: 15px;
+}
+@media screen and (max-width: 768px) {
+   .text h1 {
+       font-size: 35px; 
+   }
+   
+   .text p {
+       font-size: 14px; 
+   }
+   
+   .last h1 {
+       font-size: 35px; 
+   }
+   
+   .last p {
+       font-size: 12px; 
+   }
+   
+   .btn {
+       padding: 10px 20px; 
+   }
+   
+   .top-right-button {
+       padding: 15px 25px; 
+   }
+}
+@media screen and (max-width: 768px) {
+   .final {
+       flex-direction: column; 
+       align-items: center; 
+       gap: 10px; 
+   }
+
+   .last h1 {
+       font-size: 15px; 
+   }
+
+   .last p {
+       font-size: 10px; 
+   }
+
+   .btn {
+       padding: 8px 16px; 
+   }
+
+   .top-right-button {
+       padding: 12px 22px; 
+   }
+   .last1_btn {
+      flex-direction: row; 
+      justify-content: center; 
+      gap: 10px; 
+  }
+
+  .btn {
+      padding: 8px 16px; 
+      font-size: 12px; 
+  }
+
+  .top-right-button {
+      padding: 12px 22px; 
+      font-size: 12px
+}
+}
+

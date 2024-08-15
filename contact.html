@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</head>
+<body>
+    <header>
+        <a href="#home" class="logo">SIOMAI <span class="madnes">MADNESS</span></a>
+
+        <ul class="navlist">
+            <li><a href="index.html" class="active">HOME</a></li>
+            <li><a href="index.html#about">ABOUT US</a></li>
+            <li><a href="index.html#seller">BEST SELLERS</a></li>
+            <li><a href="index.html#gallery">GALLERY</a></li>
+            <li><a href="index.html#contact">LOCATION</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <section class="contact1">
+        <h1>Contact <span class="madness">Us</span></h1>
+        <form class="contact-form" id="contactForm" method="POST">
+           <input type="text" name="name" id="name" placeholder="Your Name">
+           <input type="email" name="email" id="email" placeholder="Your Email">
+           <textarea name="message" id="message" placeholder="Your Message"></textarea>
+           <button type="submit" class="btns">Send Message</button>
+        </form>
+     </section>
+
+     
+     <section id="contact">
+        <div class="contact">
+            <div class="final">
+                <div class="last">
+                    <h1>SIOMAI <span class="madness">MADNESS</span></h1>
+                    <p>Satisfy your Siomai Cravings!</p>
+                </div>
+                <div class="last1_btns">
+                    <p>Quick Links</p>
+                    <a href="index.html" class="btns">Home</a>
+                    <a href="index.html#about" class="btns">About Us</a>
+                    <a href="index.html#seller" class="btns">Best Seller</a>
+                    <a href="index.html#gallery" class="btns">Branches</a>
+                </div>
+                <div class="last1">
+                    <p>Contact Us<br><i class="fas fa-phone"></i>09323121231</p>
+                </div>
+                
+                <div class="last1">
+                    <p>Social Media<br>
+                    <i class="fab fa-facebook"></i> <a href="https://www.facebook.com/siomaimadnesscebu" target="_blank">Facebook Page: Siomai Madness</a><br>
+                    <i class="fas fa-envelope"></i> <a href="https://mail.google.com/mail/u/0/?hl=en#inbox?compose=DmwnWtDqMZQPFJFkpVdPWbRNHnPPPWPZjjJLjGbQNrFNzQxxLPJMmHTffcpsZfzbHtVLJjvgMdsb"  target="_blank">soimaimadness@gmail.com</a>
+                </p>
+                        
+                    
+                </div>
+            </div>
+        </div>
+        </section>
+    
+        <div class="copyright">
+            <p> <i>Siomai Madness @ 2013</i></p>
+        </div>
+        <div id="alert-container"></div>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+      
+             <script>
+         // Function to show SweetAlert with message
+         function showAlert(message) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: message
+            });
+        }
+
+        // Function to validate email
+        function validateEmail(email) {
+            // Regular expression for validating email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Function to handle form submission
+        function submitForm(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form inputs
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Validate email
+            if (!validateEmail(email)) {
+                showAlert('Please enter a valid email.');
+                return;
+            }
+
+            // Create FormData object to send form data to PHP
+            const formData = new FormData();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('message', message);
+
+            // Send form data to PHP using Fetch API
+            fetch('contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                // Handle success
+                console.log(data); // Log response from PHP
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: 'Your message has been sent successfully!'
+                });
+                document.getElementById('contactForm').reset(); // Reset form
+            })
+            .catch(error => {
+                // Handle errors
+                console.error('There was a problem with the fetch operation:', error);
+                showAlert('Oops! Something went wrong. Please try again later.');
+            });
+        }
+
+        // Add event listener to form submission
+        document.getElementById('contactForm').addEventListener('submit', submitForm);
+    </script>
+    
+    
+    
+
+</body>
+</html>

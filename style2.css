@@ -1,0 +1,392 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+/* Styling the scrollbar */
+::-webkit-scrollbar {
+   width: 6px; /* width of the scrollbar */
+}
+
+/* Styling the thumb */
+::-webkit-scrollbar-thumb {
+   border-radius:20px;
+   cursor:pointer;
+   background-color: #940000; /* color of the thumb */
+}
+
+/* Styling the thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+   background-color: #ff0000; /* new color of the thumb on hover */
+}
+
+header{
+   position:fixed;
+   width:100%;
+   height:3vh;
+   display:flex;
+   justify-content: flex-end;
+}
+a .top-right-button{
+   color: white;
+   font-weight:bold;
+}
+header li a img {
+   margin-top:15px;
+   width: 60px;
+   height: 60px;
+   margin-left: -100px;
+   transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+header li a img:hover {
+   transform: scale(1.2);
+
+   padding: 5px; /* Adjust the amount of space around the image */
+}
+
+
+.top-right-button:hover {
+   color: #cf1212;
+   background-color: white;
+}
+.top-right-button a:hover{
+   color: #cf1212;
+}
+
+
+body{
+    background-image: url("background.png");
+    overflow-x:hidden;
+}
+
+.best-seller h1{
+    color: white;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 80px;
+    font-family: "Bebas Neue", sans-serif;
+    opacity: 80%;
+ }
+.seller{
+    color: #940000;
+    font-family: "Bebas Neue", sans-serif;
+ }
+.grid{
+    display: grid;
+    margin-bottom: 40px;
+ }
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+  
+ }
+ 
+ /*Style for full menu buttons*/
+ .full_btn{
+   padding: 8px 18px;
+   border: 3px solid #940000;
+   font-size: 15px;  
+   font-family: "Kumbh Sans", sans-serif;
+   
+   margin-top: 38px;
+   cursor: pointer;
+   font-weight: 400;
+   transition: 0.5s ease;
+   background-color: #940000;
+   color: white;
+ 
+
+}
+.full_btn:hover{
+   border:2px solid #940000;
+   color: #940000;
+   font-weight:bold;
+   font-family: "Kumbh Sans", sans-serif;
+   background-color: white;
+}
+
+.my-title-class {
+   font-size: 24px;
+   margin-bottom: 5px;
+   color: #940000;
+   font-family: "Comfortaa", sans-serif;
+}
+
+.my-content-class {
+   font-size: 24px;
+   color: #940000;
+   font-family: "Comfortaa", sans-serif;
+}
+.my-confirm-button-class {
+   font-size: 24px;
+   margin-top: 10px;
+   padding: 10px 20px;
+   background-color: #940000 !important;
+   color: #ffffff;
+  border:none !important;
+   border-radius: 5px;
+   font-family: "Comfortaa", sans-serif;
+}
+
+.my-confirm-button-class:hover,
+.my-confirm-button-class {
+   background-color: #750000; 
+}
+
+
+.quantity-section {
+   display: flex;
+   align-items: center;
+   margin-bottom: 10px;
+   justify-content:center;
+   margin-top:20px;
+
+}
+
+.quantity-btn {
+   width: 30px;
+   height: 30px;
+   background-color: #000000;
+   color: white;
+   border: none;
+   border-radius: 50%;
+   font-size: 18px;
+   cursor: pointer;
+   margin: 0 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: background-color 0.3s ease;
+}
+.quantity-btn:hover{
+   background-color: #940000;
+}
+
+#quantity_tofu,
+#quantity_siomai,
+#quantity_NGOHIONG,
+#quantity_beef,
+#quantity_chicken,
+#quantity_tempura,
+#quantity_lumpia,
+#quantity_japanese,
+#quantity_squid,
+#quantity_hotdog,
+#quantity_puso,
+#quantity_pork
+
+ {
+   width: 50px;
+   height: 30px;
+   text-align: center;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size: 16px;
+   margin: 0 5px;
+}
+
+.card{
+    width: 300px;
+    height: 520px;
+    background-color: #ffffff;
+    overflow: hidden;
+    margin: 15px; 
+    border-radius:5px;
+ }
+ .card:hover{
+   scale:1.1;
+   transition:.5s;
+ }
+.card img{
+    width: 100%;
+    height: 190px;
+ }
+.card-content{
+    padding: 25px;
+    text-align: center;
+    margin-top: 25px;
+ }
+.card-content h3{
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #940000;
+    font-family: "Comfortaa", sans-serif;
+ }
+.card-content p{
+    color: #000000;
+    font-size: 12px;
+    font-family: "Monseratt", sans-serif;
+    line-height: 1.3;
+
+ }
+.contact{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #000000;
+ }
+.madness{
+    font-family: "Bebas Neue", sans-serif;
+    color: #940000;
+ }
+ .final {
+   display: flex;
+   justify-content: center;
+   margin-top: 6%;
+   margin-bottom: 6%;
+   font-family: "Bebas Neue", sans-serif;
+   color: #ffffff;
+   gap: 70px;
+
+}.final h1{
+   font-family: "Bebas Neue", sans-serif;
+   letter-spacing: 2px;
+}
+
+
+
+.last h1 {
+   font-size: 70px;
+}
+
+.last p {
+   font-size: 15px;
+   font-family: "Comfortaa", sans-serif;
+   font-weight: 200;
+   opacity: 0.8;
+}
+
+.last1 {
+   opacity: 0.8;
+   font-weight: 200;
+   font-family: "Comfortaa", sans-serif;
+}
+
+.last1 i {
+   margin-right: 5px;
+   cursor: pointer;
+}
+.last1_btn {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.last1 a{
+   color: white;
+   cursor: pointer;
+}
+.last1 a:hover{
+   border-bottom: 2px solid #940000;
+   transition: 0.3s ease;
+}
+
+
+.btn {
+   border-bottom: 2px solid transparent;
+   text-decoration: none;
+   margin-bottom: 5px;
+   color: white;
+}
+.btn:hover {
+   border-bottom: 2px solid #940000;
+   transition: 0.3s ease;
+}
+ .top-right-button {
+   position: fixed;
+   top: 20px;
+   left: 20px;
+   background-color: #cf1212;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   text-decoration: none;
+   z-index: 999;
+   cursor:pointer;
+   transition:.5s;
+   font-weight:bold;
+}
+
+
+ .card{
+    animation: CSSscrollReveal ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+  }
+ .last1{
+    opacity: 80%;
+    font-weight: 400px;
+    font-family: "Comfortaa", sans-serif;
+ }
+ .copyright{
+   background: #1F1F1F;
+   height: 30px;
+   text-align: center;
+}
+.copyright p i{
+   color: white; opacity: 50%;
+   font-weight: 200;
+   font-size: 15px;
+}
+  @keyframes CSSscrollReveal{
+    from{
+       opacity: 0;
+       transform: translateY(100px);
+    }
+    to{
+       opacity: 1;
+       transform: translateY(0);
+    }
+}
+@media screen and (max-width: 768px) {
+   .best-seller h1 {
+       font-size: 50px; 
+   }
+
+   .card {
+       width: 45%; 
+   }
+
+   .card img {
+       height: auto;
+   }
+
+   .card-content h3 {
+       font-size: 24px; 
+   }
+
+   .card-content p {
+       font-size: 12px; 
+   }
+
+   .final {
+       flex-direction: column; 
+       gap: 20px; 
+   }
+
+   .last h1 {
+       font-size: 20px;
+   }
+
+   .last p {
+       font-size: 15px; 
+   }
+
+   .btn {
+       padding: 8px 15px; 
+   }
+
+   .top-right-button {
+       padding: 10px 20px; 
+   }
+}
